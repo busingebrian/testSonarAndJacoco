@@ -1,4 +1,4 @@
-# testSonarAndJacoco
+# SonarQube And Jacoco
 
 - Jacoco Configuration: Sets the tool version to 0.8.11.
 - After Evaluate Block: Configures Jacoco reporting for both Kotlin and Android projects, handling
