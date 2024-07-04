@@ -32,6 +32,7 @@ cd sonarqube-docker``
  - To stop the services, run:
 
  - ``docker-compose down``
+
 This will stop and remove the containers, networks, and volumes defined in your configuration.
 
 
