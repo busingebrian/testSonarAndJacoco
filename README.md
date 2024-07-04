@@ -14,7 +14,7 @@
   task names are correct and consistent.
 
 ## How to run
-
+Run the following commands in order and for the proj key and proj name, replace them with your project key and name
 - ``./gradlew testDebugUnitTest``
 - ``./gradlew testDebugUnitTestCoverage``
 - ``./gradlew sonar -Dsonar.projectKey=PROJECT_KEY   
