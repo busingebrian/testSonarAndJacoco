@@ -15,9 +15,9 @@
 
 ## How to run
 
-``./gradlew testDebugUnitTest``
-``./gradlew testDebugUnitTestCoverage``
-``./gradlew sonar -Dsonar.projectKey=PROJECT_KEY   
-    -Dsonar.projectName='PROJECT_NAME'    
-    -Dsonar.host.url=http://localhost:9000   
-    -Dsonar.token={SONAR_TOKEN}``
+- ``./gradlew testDebugUnitTest``
+- ``./gradlew testDebugUnitTestCoverage``
+- ``./gradlew sonar -Dsonar.projectKey=PROJECT_KEY   
+   -Dsonar.projectName='PROJECT_NAME'    
+   -Dsonar.host.url=http://localhost:9000   
+   -Dsonar.token={SONAR_TOKEN}``
