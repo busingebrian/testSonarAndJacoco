@@ -1,4 +1,38 @@
 # SonarQube And Jacoco
+## Setting Docker compose
+By following these steps, you should be able to successfully set up and run SonarQube using Docker Compose.
+### Explanation:
+ - Version: Specifies the Docker Compose file format version.
+
+ - Services: Defines the services that make up your application. In this case, it’s just SonarQube.
+
+ - Image: Specifies the image to use for the service. Here, it’s using the Long Term Support (LTS) version of SonarQube.
+
+ - Ports: Maps the container’s port 9000 to the host’s port 9000, allowing you to access SonarQube through http://localhost:9000.
+
+ - Environment: Sets environment variables. The backslash in SONAR\_FORCEAUTHENTICATION should be removed to correctly define SONAR_FORCEAUTHENTICATION.
+
+### Running the Configuration
+ - Create a Directory: Create a directory for your Docker Compose file.
+
+ - ``
+mkdir sonarqube-docker
+cd sonarqube-docker``
+ - Save the Configuration: Save the above configuration into a file named docker-compose.yml within your created directory.
+
+ - Start the Services: Use Docker Compose to start the services defined in the configuration.
+
+  - ``docker-compose up -d``
+ - The -d flag runs the services in the background.
+
+ - Access SonarQube: Open your browser and go to http://localhost:9000 to access the SonarQube dashboard.
+
+#### Stopping the Services
+ - To stop the services, run:
+
+ - ``docker-compose down``
+This will stop and remove the containers, networks, and volumes defined in your configuration.
+
 
 ## Description of the jacoco.gradle file
 
