@@ -51,6 +51,8 @@ dependencies {
 
 sonarqube {
     properties {
+        property ("sonar.projectKey", "testSonarAndJacoco")
+        property ("sonar.projectName", "testSonarAndJacoco")
         property ("sonar.host.url", "http://localhost:9000")
         property ("sonar.login", "admin")
         property ("sonar.password", "admin")
