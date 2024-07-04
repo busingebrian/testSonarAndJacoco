@@ -1,7 +1,7 @@
 # SonarQube And Jacoco
 ## Setting Docker compose
-By following these steps, you should be able to successfully set up and run SonarQube using Docker Compose.
-### Explanation:
+
+### Explanation of the configurations:
  - Version: Specifies the Docker Compose file format version.
 
  - Services: Defines the services that make up your application. In this case, it’s just SonarQube.
@@ -12,6 +12,7 @@ By following these steps, you should be able to successfully set up and run Sona
 
  - Environment: Sets environment variables. The backslash in SONAR\_FORCEAUTHENTICATION should be removed to correctly define SONAR_FORCEAUTHENTICATION.
 
+By following these steps, you should be able to successfully set up and run SonarQube using Docker Compose.
 ### Running the Configuration
  - Create a Directory: Create a directory for your Docker Compose file.
 
