@@ -27,5 +27,5 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 docker-compose = {id = "com.avast.gradle.docker-compose", version.ref = "dockerVersion"}
 sonarqube = { id = "org.sonarqube", version.ref = "sonarVersion"}
-jacoco = { id = "jacoco"}
+
 
