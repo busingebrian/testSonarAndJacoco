@@ -1,5 +1,7 @@
 # SonarQube And Jacoco
 
+  ## Description of the jacoco.gradle file
+
 - Jacoco Configuration: Sets the tool version to 0.8.11.
 - After Evaluate Block: Configures Jacoco reporting for both Kotlin and Android projects, handling
   different build types and product flavors.
