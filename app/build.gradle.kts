@@ -49,13 +49,13 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
-sonarqube {
+sonar {
     properties {
         property ("sonar.projectKey", "testSonarAndJacoco")
         property ("sonar.projectName", "testSonarAndJacoco")
         property ("sonar.host.url", "http://localhost:9000")
         property ("sonar.sourceEncoding", "UTF-8")
-        property("sonar.coverage.jacoco.xmlReportPaths", "${buildDir}/reports/jacoco/testDebugUnitTest/testDebugUnitTestCoverage.xml")
-        property("sonar.junit.reportPaths", "${buildDir}/test-results/testDebugUnitTest")
+        property("sonar.coverage.jacoco.xmlReportPaths", "/Users/fenix2/AndroidStudioProjects/testSonarAndJacoco/app/build/reports/jacoco/testDebugUnitTestCoverage/testDebugUnitTestCoverage.xml")
+        property("sonar.junit.reportPaths", "/Users/fenix2/AndroidStudioProjects/testSonarAndJacoco/app/build/reports/jacoco/testDebugUnitTestCoverage/testDebugUnitTestCoverage.xml")
     }
 }

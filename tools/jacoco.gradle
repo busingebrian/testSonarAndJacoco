@@ -1,3 +1,166 @@
+//
+//apply plugin: "jacoco"
+//
+//jacoco {
+//    toolVersion = "0.8.11"
+//    reportsDirectory = layout.buildDirectory.dir("reports/jacoco")
+//}
+//
+//afterEvaluate {
+//    android.applicationVariants.all { variant ->
+//        if (variant.buildType.name == "debug") {
+//            def testTaskName = "test${variant.name.capitalize()}UnitTest"
+//            def coverageTaskName = "${testTaskName}Coverage"
+//            task(coverageTaskName, type: JacocoReport, dependsOn: testTaskName) {
+//                group = "Reporting"
+//                description = "Generate Jacoco coverage reports for the ${variant.name} build."
+//
+//                def fileFilter = [
+//                        'android/databinding/**/*.class',
+//                        '**/android/databinding/*Binding.class',
+//                        '**/android/databinding/*',
+//                        '**/androidx/databinding/*',
+//                        '**/BR.*',
+//                        '**/R.class',
+//                        '**/R$*.class',
+//                        '**/BuildConfig.*',
+//                        '**/Manifest*.*',
+//                        '**/*Test*.*',
+//                        'android/**/*.*',
+//                        '**/*_MembersInjector.class',
+//                        '**/Dagger*Component.class',
+//                        '**/Dagger*Component$Builder.class',
+//                        '**/Dagger*Subcomponent*.class',
+//                        '**/*Subcomponent$Builder.class',
+//                        '**/*Module_*Factory.class',
+//                        '**/di/module/*',
+//                        '**/*_Factory*.*',
+//                        '**/*Module*.*',
+//                        '**/*Dagger*.*',
+//                        '**/*Hilt*.*',
+//                        '**/*MapperImpl*.*',
+//                        '**/*$ViewInjector*.*',
+//                        '**/*$ViewBinder*.*',
+//                        '**/BuildConfig.*',
+//                        '**/*Component*.*',
+//                        '**/*BR*.*',
+//                        '**/Manifest*.*',
+//                        '**/*$Lambda$*.*',
+//                        '**/*Companion*.*',
+//                        '**/*Module*.*',
+//                        '**/*Dagger*.*',
+//                        '**/*Hilt*.*',
+//                        '**/*MembersInjector*.*',
+//                        '**/*_MembersInjector.class',
+//                        '**/*_Factory*.*',
+//                        '**/*_Provide*Factory*.*',
+//                        '**/*Extensions*.*',
+//                        '**/*$Result.*',
+//                        '**/*$Result$*.*',
+//                        '**/*JsonAdapter.*'
+//                ]
+//
+//                def javaTree = fileTree(dir: "${layout.buildDirectory}/intermediates/javac/${variant.name}/classes", excludes: fileFilter)
+//                def kotlinTree = fileTree(dir: "${layout.buildDirectory}/tmp/kotlin-classes/${variant.name}", excludes: fileFilter)
+//                classDirectories.setFrom(files([javaTree, kotlinTree]))
+//                executionData.setFrom(fileTree(dir: layout.buildDirectory, includes: ["jacoco/${testTaskName}.exec"]))
+//
+//                def coverageSourceDirs = ["src/main/java", "src/${variant.flavorName}/java", "src/${variant.buildType.name}/java"]
+//                sourceDirectories.setFrom(files(coverageSourceDirs))
+//                additionalSourceDirs.setFrom(files(coverageSourceDirs))
+//
+//                reports {
+//                    xml.required.set(true)
+//                    html.required.set(true)
+//                    html.outputLocation.set(file("${layout.buildDirectory}/reports/jacoco/${variant.name}"))
+//                }
+//            }
+//        }
+//    }
+//}
+
+//apply plugin: "jacoco"
+//
+//jacoco {
+//    toolVersion = "0.8.11"
+//}
+//
+//afterEvaluate {
+//    android.applicationVariants.all { variant ->
+//        if (variant.buildType.name == "debug") {
+//            def testTaskName = "test${variant.name.capitalize()}UnitTest"
+//            def coverageTaskName = "${testTaskName}Coverage"
+//            task(coverageTaskName, type: JacocoReport, dependsOn: testTaskName) {
+//                group = "Reporting"
+//                description = "Generate Jacoco coverage reports for the ${variant.name} build."
+//
+//                def fileFilter = [
+//                        'android/databinding/**/*.class',
+//                        '**/android/databinding/*Binding.class',
+//                        '**/android/databinding/*',
+//                        '**/androidx/databinding/*',
+//                        '**/BR.*',
+//                        '**/R.class',
+//                        '**/R$*.class',
+//                        '**/BuildConfig.*',
+//                        '**/Manifest*.*',
+//                        '**/*Test*.*',
+//                        'android/**/*.*',
+//                        '**/*_MembersInjector.class',
+//                        '**/Dagger*Component.class',
+//                        '**/Dagger*Component$Builder.class',
+//                        '**/Dagger*Subcomponent*.class',
+//                        '**/*Subcomponent$Builder.class',
+//                        '**/*Module_*Factory.class',
+//                        '**/di/module/*',
+//                        '**/*_Factory*.*',
+//                        '**/*Module*.*',
+//                        '**/*Dagger*.*',
+//                        '**/*Hilt*.*',
+//                        '**/*MapperImpl*.*',
+//                        '**/*$ViewInjector*.*',
+//                        '**/*$ViewBinder*.*',
+//                        '**/BuildConfig.*',
+//                        '**/*Component*.*',
+//                        '**/*BR*.*',
+//                        '**/Manifest*.*',
+//                        '**/*$Lambda$*.*',
+//                        '**/*Companion*.*',
+//                        '**/*Module*.*',
+//                        '**/*Dagger*.*',
+//                        '**/*Hilt*.*',
+//                        '**/*MembersInjector*.*',
+//                        '**/*_MembersInjector.class',
+//                        '**/*_Factory*.*',
+//                        '**/*_Provide*Factory*.*',
+//                        '**/*Extensions*.*',
+//                        '**/*$Result.*',
+//                        '**/*$Result$*.*',
+//                        '**/*JsonAdapter.*'
+//                ]
+//
+//                def javaTree = fileTree(dir: "${buildDir}/intermediates/javac/${variant.name}/classes", excludes: fileFilter)
+//                def kotlinTree = fileTree(dir: "${buildDir}/tmp/kotlin-classes/${variant.name}", excludes: fileFilter)
+//                classDirectories.setFrom(files([javaTree, kotlinTree]))
+//                executionData.setFrom(fileTree(dir: buildDir, includes: ["jacoco/${testTaskName}.exec"]))
+//
+//                def coverageSourceDirs = ["src/main/java", "src/${variant.flavorName}/java", "src/${variant.buildType.name}/java"]
+//                sourceDirectories.setFrom(files(coverageSourceDirs))
+//                additionalSourceDirs.setFrom(files(coverageSourceDirs))
+//
+//                reports {
+//                    xml.required.set(true)
+//                    html.required.set(true)
+//                    html.outputLocation.set(file("${buildDir}/reports/jacoco/${variant.name}"))
+//                }
+//            }
+//        }
+//    }
+//}
+//tasks.named("sonar").configure {
+//    dependsOn "testDebugUnitTestCoverage"
+//}
+
 
 apply plugin: "jacoco"
 
@@ -76,4 +239,7 @@ afterEvaluate {
             }
         }
     }
+}
+tasks.named("sonar").configure {
+    dependsOn "testDebugUnitTestCoverage"
 }
